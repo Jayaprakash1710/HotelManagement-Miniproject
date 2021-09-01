@@ -1,0 +1,200 @@
+import re
+import datetime
+class bio:
+    def __init__(self):
+        a=input("Name:")
+        print("Proof")
+        print("Press 1 - Aadhar card")
+        print("Press 2 - Driving license")
+        print("Press 3 - Voter ID")
+        print("Press 4 - PAN card")
+    def details(self):
+        b = int(input("Select from the above:"))
+        if b == 1:
+            self.c=input("Aadhar number:")
+            self.x='^\d{12}$'
+            if re.search(self.x,self.c):
+                y=staydetails()
+                y.rooms()
+            else:
+                print("Please enter correct Aadhar number:")
+        if b == 2:
+            self.c=input("Driving license number:")
+            self.x='^\w{2}\d{13}$'
+            if re.search(self.x,self.c):
+                y=staydetails()
+                y.rooms()
+            else:
+                print("Please enter correct number:")
+        if b == 3:
+            self.c=input("Voter ID number:")
+            self.x='^\w{3}\d{7}$'
+            if re.search(self.x, self.c):
+                y = staydetails()
+                y.rooms()
+            else:
+                print("Please enter correct Voter ID number:")
+        if b == 4:
+            self.c=input("PAN number:")
+            self.x='^\w{5}\d{4}\w{1}$'
+            if re.search(self.x,self.c):
+                y=staydetails()
+                y.rooms()
+            else:
+                print("Please enter correct PAN number:")
+class staydetails:
+    def __init__(self):
+        d=input("E-mail:")
+        e='^[a-z 0-9]+[\._]?[a-z 0-9]+[@]+[a-z]+[.]\w{2,3}$'
+        if re.search(e,d):
+            print("1-Normal single - 700rs/day")
+            print("2-Normal double - 900rs/day")
+            print("3-Deluxe single - 2000rs/day")
+            print("4-Deluxe double - 2700rs/day")
+            print("5-Super Deluxe single - 5000rs/day")
+            print("6-Super Deluxe double - 7500rs/day")
+            print("7-Suit single - 12599rs/day")
+            print("8-Suit double - 15599rs/day")
+    def rooms(self):
+        f=int(input("Select from the above"))
+        if f == 1:
+            g=int(input("Days to stay:"))
+            h=g*700
+            s=(12/100)*h
+            cg=(12/100)*h
+            l=(6/100)*h
+            n=(h+s+cg+l)
+            i=datetime.datetime.now()
+            j=i+datetime.timedelta(days=g)
+            print("Normal-Single")
+            print("Check in time:",i)
+            print("Check out time:",j)
+            print("Stay Amount:",round(h,2))
+            print("State GST:",round(s,2))
+            print("Central GST:",round(cg,2))
+            print("Service tax:",round(l,2))
+            print("Net total:",round(n,2))
+        if f == 2:
+            g = int(input("Days to stay:"))
+            h = g * 900
+            s = (12 / 100) * h
+            cg = (12 / 100) * h
+            l = (6 / 100) * h
+            n = (h + s + cg + l)
+            i = datetime.datetime.now()
+            j = i + datetime.timedelta(days=g)
+            print("Normal double")
+            print("Check in time:", i)
+            print("Check out time:", j)
+            print("Stay Amount:", round(h, 2))
+            print("State GST:", round(s, 2))
+            print("Central GST:", round(cg, 2))
+            print("Service tax:", round(l, 2))
+            print("Net total:", round(n,2))
+        if f == 3:
+            g = int(input("Days to stay:"))
+            h = g * 2000
+            s = (12 / 100) * h
+            cg = (12 / 100) * h
+            l = (6 / 100) * h
+            n = (h + s + cg + l)
+            i = datetime.datetime.now()
+            j = i + datetime.timedelta(days=g)
+            print("Deluxe single")
+            print("Check in time:", i)
+            print("Check out time:", j)
+            print("Stay Amount:", round(h, 2))
+            print("State GST:", round(s, 2))
+            print("Central GST:", round(cg, 2))
+            print("Service tax:", round(l, 2))
+            print("Net total:", round(n,2))
+        if f == 4:
+            g = int(input("Days to stay:"))
+            h = g * 2700
+            s = (12 / 100) * h
+            cg = (12 / 100) * h
+            l = (6 / 100) * h
+            n = (h + s + cg + l)
+            i = datetime.datetime.now()
+            j = i + datetime.timedelta(days=g)
+            print("Deluxe double")
+            print("Check in time:", i)
+            print("Check out time:", j)
+            print("Stay Amount:", round(h, 2))
+            print("State GST:", round(s, 2))
+            print("Central GST:", round(cg, 2))
+            print("Service tax:", round(l, 2))
+            print("Net total:", round(n,2))
+        if f == 5:
+            g = int(input("Days to stay:"))
+            h = g * 5000
+            s = (12 / 100) * h
+            cg = (12 / 100) * h
+            l = (6 / 100) * h
+            n = (h + s + cg + l)
+            i = datetime.datetime.now()
+            j = i + datetime.timedelta(days=g)
+            print("Super deluxe single")
+            print("Check in time:", i)
+            print("Check out time:", j)
+            print("Stay Amount:", round(h, 2))
+            print("State GST:", round(s, 2))
+            print("Central GST:", round(cg, 2))
+            print("Service tax:", round(l, 2))
+            print("Net total:", round(n,2))
+        if f == 6:
+            g = int(input("Days to stay:"))
+            h = g * 7500
+            s = (12 / 100) * h
+            cg = (12 / 100) * h
+            l = (6 / 100) * h
+            n = (h + s + cg + l)
+            i = datetime.datetime.now()
+            j = i + datetime.timedelta(days=g)
+            print("Super deluxe double")
+            print("Check in time:", i)
+            print("Check out time:", j)
+            print("Stay Amount:", round(h, 2))
+            print("State GST:", round(s, 2))
+            print("Central GST:", round(cg, 2))
+            print("Service tax:", round(l, 2))
+            print("Net total:", round(n,2))
+        if f == 7:
+            g = int(input("Days to stay:"))
+            h = g * 12599
+            s = (12 / 100) * h
+            cg = (12 / 100) * h
+            l = (6 / 100) * h
+            n = (h + s + cg + l)
+            i = datetime.datetime.now()
+            j = i + datetime.timedelta(days=g)
+            print("Suit single")
+            print("Check in time:", i)
+            print("Check out time:", j)
+            print("Stay Amount:", round(h, 2))
+            print("State GST:", round(s, 2))
+            print("Central GST:", round(cg, 2))
+            print("Service tax:", round(l, 2))
+            print("Net total:", round(n,2))
+        if f == 8:
+            g = int(input("Days to stay:"))
+            h = g * 15599
+            s = (12 / 100) * h
+            cg = (12 / 100) * h
+            l = (6 / 100) * h
+            n = (h + s + cg + l)
+            i = datetime.datetime.now()
+            j = i + datetime.timedelta(days=g)
+            print("Suit double")
+            print("Check in time:", i)
+            print("Check out time:", j)
+            print("Stay Amount:", round(h, 2))
+            print("State GST:", round(s, 2))
+            print("Central GST:", round(cg, 2))
+            print("Service tax:", round(l, 2))
+            print("Net total:", round(n,2))
+z=bio()
+z.details()
+
+
+
